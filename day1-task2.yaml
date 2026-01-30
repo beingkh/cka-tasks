@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-ns2
+  namespace: ns2
+  labels:
+    kubernetes.io/day: "10"
+    kubernetes.io/task: "2"
+    kubernetes.io/type: "deployment"
+    kubernetes.io/app: nginx
+spec:
+  selector:
+    matchLabels:
+      kubernetes.io/day: "10"
+      kubernetes.io/task: "2"
+      kubernetes.io/type: "deployment"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        kubernetes.io/day: "10"
+        kubernetes.io/task: "2"
+        kubernetes.io/type: "deployment"
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25.4
+        ports:
+        - containerPort: 80
+---
+
+
