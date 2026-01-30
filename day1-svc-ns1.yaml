@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-ns1
+  namespace: ns1
+  labels:
+    kubernetes.io/day: "10"
+    kubernetes.io/task: "1"
+    kubernetes.io/type: "service"
+    kubernetes.io/app: nginx
+spec:
+  selector:
+    kubernetes.io/type: "service"
+    kubernetes.io/app: nginx
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: ClusterIP
+---
+
+
