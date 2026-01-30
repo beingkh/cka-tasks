@@ -25,6 +25,7 @@ spec:
         image: nginx:1.25.4
         ports:
         - containerPort: 80
+        - targetPort: 8080
 ---
 
 
