@@ -14,7 +14,7 @@ spec:
       kubernetes.io/day: "10"
       kubernetes.io/task: "2"
       kubernetes.io/type: "deployment"
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
