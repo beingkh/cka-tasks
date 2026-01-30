@@ -10,7 +10,7 @@ metadata:
     kubernetes.io/app: nginx
 spec:
   selector:
-    kubernetes.io/type: "service"
+    kubernetes.io/type: "pod"
     kubernetes.io/app: nginx
   ports:
   - protocol: TCP
