@@ -11,13 +11,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      kubernetes.io/type: "deployment"
+      kubernetes.io/type: "pod"
       kubernetes.io/app: nginx
   replicas: 3
   template:
     metadata:
       labels:
-        kubernetes.io/type: "deployment"
+        kubernetes.io/type: "pod"
         kubernetes.io/app: nginx
     spec:
       containers:
